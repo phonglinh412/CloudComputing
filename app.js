@@ -21,10 +21,5 @@ app.listen(process.env.PORT || 3000, function () {
     console.log("Your app running on port 3000");
 })
 
-get ToyID 
-if(toyid != null){
-    const errorMsg = "ID is existed!"
-    res.render('index',{errorName:errorMsg})
-    return
-}
+
 
