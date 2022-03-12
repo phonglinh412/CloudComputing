@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styleDetail.css">
+</head>
+
+<body>
+    <div class="abc">
+        <h1 id="det">Detail</h1>
+        <h1 id="upd">Update</h1>
+        <div class="container">
+            <form action="doUpdate" method="POST">
+                <input type="hidden" name="id" value="{{toy._id}}">
+                <p>Toy ID : <span>{{toy.toyid}}</span><input type="text" name="toyid" id="toyid"
+                        value="{{toy.toyid}}">
+                </p>
+                <p>Toy Name : <span>{{toy.toy}}</span><input type="text" name="toy" id="toy" value="{{toy.toy}}">
+                </p>
+                <p>Image: <span class="image">{{toy.image}}</span><input type="text" name="image" id="image" value="{{toy.image}}">
+                </p>
+                <p>Price: <span>{{toy.price}}</span><input type="text" name="price" id="price"
+                        value="{{toy.price}}">
+                </p>
+                <p>Amount: <span>{{toy.amount}}</span><input type="text" name="amount" id="amount"
+                        value="{{toy.amount}}">
+                </p>
+                <p><input type="submit" id="btn3" value="Update"></p>
+            </form>
+            <div class="div2">
+                <span><input type="button" id="btn" value="Edit"></span>
+                <form action="delete" method="POST">
+                    <input type="hidden" name="id" value="{{toy._id}}">
+                    <span><input type="submit" id="btn2" value="Delete"></span>
+                </form>
+                <form action="/" method="GET">
+                    <span><input type="submit" id="btn4" value="Back"></span>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/js/detail.js"></script>
+</html>
